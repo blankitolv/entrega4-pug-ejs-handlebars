@@ -1,0 +1,10 @@
+extends layouts/base.pug
+block content 
+  div(class="container")
+   h1 No existen productos cargados
+   div(class="row")
+      div(class="col-12 alert alert-danger" role="alert" style="height: 100vw;")
+         h3 Aún no tenemos productos cargados
+         img(class="col-3" width=300 height=300 src="https://image.shutterstock.com/image-vector/oops-surprised-businessman-260nw-374708878.jpg")
+         div(class="row mt-3")
+            a(class="btn btn-warning" href="/") volver

@@ -1,0 +1,13 @@
+extends layouts/base.pug
+block content 
+  div(class="container")
+    div(class="row")
+        each p in response
+          div(class="col-lg-4 d-flex align-items-stretch")
+            div(class="card mt-2 d-flex align-items-center justify-content-center text-dark bg-light" style="width:18rem")
+              img(src=p.thumbnail width=200 heigth=100 class=card-img-top)
+              div(class="card-body")
+                h5(class="card-title")=p.title
+                p(class="card-text")=p.price
+              div(class="card-footer text-muted col-12")
+                a(href="#" class="btn btn-secondary col-12") Buy

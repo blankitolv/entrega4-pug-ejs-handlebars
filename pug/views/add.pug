@@ -1,0 +1,22 @@
+extends layouts/base.pug
+block content
+  div(class="container mt-5")
+    div(class="row")
+      div(class="col-4")
+      div(class="col-4 p-3 border d-flex align-items-center justify-content-center")
+        label Agrega Productos
+          form(action="/productos" method="post")
+            div(class="mb-3")
+              label(class="form-label" for="title") title
+              input(type="text" name="title")
+              div(class="form-text") Ingrese el nombre del producto
+            div(class="mb-3")
+              label(for="price") Price
+              input(type="text" name="price")
+              div(class="form-text") Ingrese el precio del producto
+            div(class="mb-3")
+              label(for="thumbnail") thumbnail
+              input(type="text" name="thumbnail")
+              div(class="form-text") Ingrese URL de la imagen del producto
+            button(class="btn btn-primary" type="submit") Enviar
+            div(class="col-4")

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('partials/head') %>
+<body>
+   <%- include ('partials/nav') %>
+   <div class="container mt-5">
+      <div class="row">
+         <div class="col-4"></div>
+         <div class="col-4 p-3 border d-flex align-items-center justify-content-center">
+            <label>Agrega Productos
+               <form action="/productos" method="post">
+                  <div class="m-3">
+                     <input type="text" name="title" required>
+                     <div class="form-text"> Ingrese nombre del producto</div>
+                  </div>
+                  <div class="m-3">
+                     <input type="number" name="price" required>
+                     <div class="form-text">Ingrese precio del producto</div>
+                  </div>
+                  <div class="m-3">
+                     <input type="text" name="thumbnail" required>
+                     <div class="form-text">Ingrese link imagen del producto</div>
+                  </div>
+                  <button class="btn btn-primary" type="submit"> Enviar </button>
+               </form>
+            </label>
+         </div>
+      </div>
+   </div>
+   <%- include ('partials/scripts') %>
+</body>
+</html>

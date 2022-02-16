@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('partials/head') %>
+<body>
+   <%- include ('partials/nav') %>
+   <div class="container">
+      <div class="row">
+         <% response.forEach(function(res){ %>
+            <div class="col-lg-4 d-flex align-items-stretch">
+               <div class="card mt-2 d-flex align-items-center justify-content-center text-dark bg-light" style="width:18rem">
+                  <img src="<%=res.thumbnail%>" width=200 heigth=100 class=card-img-top alt="">
+                  <div class="card-body">
+                     <h5 class="card-title">
+                        <%= res.title %>
+                     </h5>
+                     <p class="card-text">
+                        <%= res.price %>
+                     </p>
+                  </div>
+                  <div class="card-footer text-muted col-12">
+                     <a href="#" class="btn btn-secondary col-12">Buy</a>
+                  </div>
+               </div>
+            </div>
+         <% }) %>
+      </div>
+   </div>
+   <%- include ('partials/scripts') %>
+</body>
+</html>
